@@ -1,30 +1,8 @@
-clusterName: dev1usa
-environment: dev
-platform: aws
-kubernetes:
-  masterSpec:
-    version: "v1.20.10"
-    serverCountMax: 3
-    serverCountMin: 3
-    instaceSize: "m5.2xlarge"
-  workerSpec:
-  - name: cpu-large-a
-    serverCountMax: 4
-    serverCountMin: 6
-    instanceSize: "m5.2xlarge"
-    zones:
-    - us-east-1a
-  - name: cpu-large-b
-    serverCountMax: 4
-    serverCountMin: 6
-    instanceSize: "m5.2xlarge"
-    zones:
-    - us-east-1b
-   - name: cpu-4xlarge-b
-    serverCountMax: 4
-    serverCountMin: 6
-    instanceSize: "m5.4xlarge"
-    zones:
-    - us-east-1a
-   
+docker-cli-tools: &docker-cli-tools
+  docker:
+  - image: k8s-utils
+    <<: *jfrog-auth
     
+env-vault: &env-vault
+  VAULT_ADDR="https://vault-dev-testsolution.com"
+  
