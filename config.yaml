@@ -1,4 +1,4 @@
-clusterName: dev1usa
+clusterName: dev1ger
 environment: dev
 platform: aws
 kubernetes:
@@ -13,18 +13,18 @@ kubernetes:
     serverCountMin: 6
     instanceSize: "m5.2xlarge"
     zones:
-    - us-east-1a
+    - eu-east-1a
   - name: cpu-large-b
     serverCountMax: 4
     serverCountMin: 6
     instanceSize: "m5.2xlarge"
     zones:
-    - us-east-1b
+    - eu-east-1b
    - name: cpu-4xlarge-b
     serverCountMax: 4
     serverCountMin: 6
     instanceSize: "m5.4xlarge"
     zones:
-    - us-east-1a
+    - eu-east-1a
    
     
