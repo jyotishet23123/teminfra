@@ -1,0 +1,8 @@
+docker-cli-tools: &docker-cli-tools
+  docker:
+  - image: k8s-utils
+    <<: *jfrog-auth
+    
+env-vault: &env-vault
+  VAULT_ADDR="https://vault-dev-testsolution.com"
+  
